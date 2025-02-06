@@ -30,21 +30,44 @@
   font-size: 16px;
   margin: 0 11rem 1rem 0rem;
   letter-spacing: 0.8px;
-  word-spacing: 1px;
+  /* word-spacing: 0.7px; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .hero-icons {
+  display: flex;
+  /* flex-direction: row; */
+  align-items: flex-start;
+  /* gap: 1rem; */
   margin-bottom: 1rem;
-  margin-top: 1rem;
+
+  /* margin-top: 0.7rem; */
+}
+
+.hero-icons a{
+  padding: 7px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  line-height: 0; /* This removes extra space below the image */
+  display: flex; /* This helps with alignment */
+  align-items: baseline;
+}
+
+
+
+.hero-icons a:hover {
+  background-color: rgba(128, 128, 128, 0.2);
+  
 }
 
 .hero-icons img {
   width: 2.4rem;
+  display: block;
 }
 
-.hero-icons img:first-child {
-  margin-right: 0.9rem;
-}
+
 
 .btn {
   width: 6rem;
@@ -87,6 +110,10 @@
   border-radius: 4px;
 }
 
+.work-anchor:hover{
+  background-color: rgb(200, 255, 0, 0.1);
+}
+
 .work {
   color: #c6ff00;
 }
@@ -100,3 +127,4 @@
   width: 36rem;
   height: auto;
 }
+

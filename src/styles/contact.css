@@ -26,19 +26,16 @@ footer {
   gap: 1.2rem;
   justify-self: center;
   align-items: center;
-  text-decoration: none; /* Ensure the link has no default underline */
-  min-width: 150px; /* Ensures the link has a minimum clickable width */
-  padding: 8px 0; /* Adds some padding for easier clicking */
+  text-decoration: none;
+  min-width: 150px;
+  padding: 8px 0;
 }
-
-
 
 .social-links a:hover {
   cursor: pointer;
   color: #c6ff00;
   fill: #c6ff00;
 }
-
 
 .footerbg {
   width: 18rem;
@@ -51,24 +48,4 @@ footer {
   margin-top: 1rem;
 }
 
-/* .text-input {
-  background-color: inherit;
-  color: white;
-  border: 1px solid rgb(170, 168, 168);
-  padding: 10px;
-  margin: 10px 0;
-  font-size: 1rem; 
-  border-radius: 5px;
-}
 
-.text-input:hover{
-  border: 2px solid white;
-}
-
-
-
-
-.text-input:focus {
-  border: 2px solid #c6ff00;
-  color: white;
-} */

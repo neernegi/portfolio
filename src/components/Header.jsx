@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/header.css";
+import PersistentDrawerRight from "./Drawer";
 
 function Header() {
   // Function to handle smooth scrolling

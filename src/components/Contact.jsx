@@ -1,18 +1,97 @@
-import React from "react";
-import { logos } from "../libs/logos";
-import link from "/assets/icons/linkdn.png";
+import React, { useState, useEffect } from "react";
 import contactbg from "/assets/message.svg";
-import EmailIcon from '@mui/icons-material/Email';
-import "../styles/contact.css";
+import EmailIcon from "@mui/icons-material/Email";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
-
-
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import AddIcCallIcon from "@mui/icons-material/AddIcCall";
+import "../styles/contact.css";
 
 function Contact() {
+  const [result, setResult] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formErrors, setFormErrors] = useState({});
+
+  // Auto-close result message after 3 seconds
+  useEffect(() => {
+    let timeoutId;
+    if (result) {
+      timeoutId = setTimeout(() => {
+        setResult("");
+      }, 3000);
+    }
+    // Cleanup function to clear timeout if component unmounts or result changes
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
+  }, [result]);
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+
+    if (value.trim() !== "") {
+      setFormErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
+    }
+  };
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("");
+    setIsSubmitting(true);
+
+    let errors = {};
+    if (!formData.name.trim()) errors.name = "Name is required";
+    if (!formData.email.trim()) errors.email = "Email is required";
+    if (!formData.message.trim()) errors.message = "Message is required";
+
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      setIsSubmitting(false);
+      return;
+    }
+
+    setFormErrors({});
+    setResult("Sending...");
+
+    const formDataToSend = new FormData();
+    formDataToSend.append("name", formData.name);
+    formDataToSend.append("email", formData.email);
+    formDataToSend.append("message", formData.message);
+    formDataToSend.append("access_key", import.meta.env.VITE_ACCESS_KEY);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataToSend,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        console.error("Error:", data);
+        setResult(data.message || "Submission failed. Please try again.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      setResult("An error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <footer>
       <div className="footer">
@@ -25,7 +104,7 @@ function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-               <GitHubIcon className="social-icon" sx={{ fontSize: 37 }} />
+                <GitHubIcon className="social-icon" sx={{ fontSize: 37 }} />
                 Github
               </a>
               <a
@@ -40,40 +119,30 @@ function Contact() {
                 <EmailIcon className="social-icon" sx={{ fontSize: 37 }} />
                 neerajnegi3443@gmail.com
               </a>
+              <a href="tel:+919058527467">
+                <AddIcCallIcon className="social-icon" sx={{ fontSize: 37 }} />
+                9058527467
+              </a>
             </div>
           </div>
-          <img src={contactbg} alt="" className="footerbg" />
+          <img src={contactbg} alt="Contact background" className="footerbg" />
         </div>
         <div className="contact">
           <h1>Say Hi</h1>
-          <div className="contact-input">
+          <form onSubmit={onSubmit} className="contact-input">
             <TextField
-              id="outlined-basic"
+              id="name"
+              name="name"
               label="Name*"
               variant="outlined"
+              value={formData.name}
+              onChange={handleInputChange}
               className="text-input"
+              error={!!formErrors.name}
+              helperText={formErrors.name}
               sx={{
-                input: { color: "white" },
                 width: "32rem",
-                label: { color: "white" }, // Default label color
-                "& .MuiInputLabel-root": { color: "white" }, // Default label color
-                "& .MuiInputLabel-root.Mui-focused": { color: "#c6ff00" }, // Focused label color
-                "& .MuiOutlinedInput-root": {
-                  "& fieldset": { borderColor: "white" }, // Default border color
-                  "&:hover fieldset": { border: "2px solid white" }, // Hover border color
-                  "&.Mui-focused fieldset": { borderColor: "#c6ff00" }, // Focus border color
-                },
-              }}
-            />
-            <TextField
-              id="outlined-basic"
-              label="Email*"
-              variant="outlined"
-              className="text-input"
-              sx={{
-                input: { color: "white" },
-                label: { color: "white" },
-                width: "32rem",
+                "& .MuiInputBase-input": { color: "white" },
                 "& .MuiInputLabel-root": { color: "white" },
                 "& .MuiInputLabel-root.Mui-focused": { color: "#c6ff00" },
                 "& .MuiOutlinedInput-root": {
@@ -84,16 +153,42 @@ function Contact() {
               }}
             />
             <TextField
-              id="outlined-basic"
+              id="email"
+              name="email"
+              label="Email*"
+              variant="outlined"
+              value={formData.email}
+              onChange={handleInputChange}
+              className="text-input"
+              error={!!formErrors.email}
+              helperText={formErrors.email}
+              sx={{
+                width: "32rem",
+                "& .MuiInputBase-input": { color: "white" },
+                "& .MuiInputLabel-root": { color: "white" },
+                "& .MuiInputLabel-root.Mui-focused": { color: "#c6ff00" },
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": { borderColor: "white" },
+                  "&:hover fieldset": { border: "2px solid white" },
+                  "&.Mui-focused fieldset": { borderColor: "#c6ff00" },
+                },
+              }}
+            />
+            <TextField
+              id="message"
+              name="message"
               label="Message*"
               variant="outlined"
               multiline
               rows={4}
+              value={formData.message}
+              onChange={handleInputChange}
               className="text-input"
+              error={!!formErrors.message}
+              helperText={formErrors.message}
               sx={{
-                input: { color: "white" },
-                label: { color: "white" },
                 width: "32rem",
+                "& .MuiInputBase-input": { color: "white" },
                 "& .MuiInputLabel-root": { color: "white" },
                 "& .MuiInputLabel-root.Mui-focused": { color: "#c6ff00" },
                 "& .MuiOutlinedInput-root": {
@@ -104,17 +199,19 @@ function Contact() {
               }}
             />
             <Button
+              type="submit"
               variant="outlined"
               sx={{
-                width: "6rem",
+                width: "8rem",
                 color: "#c6ff00",
                 border: "1px solid #c6ff00",
               }}
               endIcon={<SendIcon sx={{ fill: "#c6ff00" }} />}
             >
-              Send
+              {isSubmitting ? "Sending..." : "Send"}
             </Button>
-          </div>
+          </form>
+          {result && <p className="form-result">{result}</p>}
         </div>
       </div>
     </footer>

@@ -9,7 +9,6 @@ import Featured from "./Featured";
 import Contact from "./Contact";
 // import resumeurl from "/assets/resume.pdf"
 
-
 function Hero() {
   const resumeUrl = "/resume.pdf";
   return (
@@ -29,10 +28,18 @@ function Hero() {
             solutions.
           </p>
           <div className="hero-icons">
-            <a href="#">
+            <a
+              href="https://github.com/neernegi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={logos.github.logo} alt="github" />
             </a>
-            <a href="#">
+            <a
+              href="https://www.linkedin.com/in/neeraj-negi-a07008228"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={logos.linkdn.logo} alt="linkedin" />
             </a>
           </div>
@@ -70,7 +77,6 @@ function Hero() {
         <Featured />
       </div>{" "}
       {/* Featured Projects Section */}
-      
       <div id="contact">
         <Contact />
       </div>{" "}
