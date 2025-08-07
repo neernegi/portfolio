@@ -59,20 +59,64 @@ export const logos = {
     label: "Redux",
     logo: "/assets/icons/redux.svg",
   },
-  scss:{
-    label:"SCSS",
-    logo:""
+  scss: {
+    label: "SCSS",
+    logo: "",
   },
-  jquery:{
-    label:"SCSS",
-    logo:""
+  jquery: {
+    label: "SCSS",
+    logo: "",
   },
-  github:{
-    label:"Github",
-    logo:"/assets/icons/github.png"
+  github: {
+    label: "Github",
+    logo: "/assets/icons/github.png",
   },
-  linkdn:{
-    label:"Linkdn",
-    logo:"/assets/icons/linkdn.png"
-  }
+  linkdn: {
+    label: "Linkdn",
+    logo: "/assets/icons/linkdn.png",
+  },
+  aws: {
+    label: "AWS",
+    logo: "/assets/icons/amazon.jpg",
+  },
+  nextjs: {
+    label: "NextJs",
+    logo: "/assets/icons/next-js.png",
+  },
+  nextAuth: {
+    label: "Next Auth",
+    logo: "/assets/icons/nextauth.png",
+  },
+  dynamo: {
+    label: "DynamoDb",
+    logo: "/assets/icons/dynamo.svg",
+  },
+  s3: {
+    label: "AWS s3",
+    logo: "/assets/icons/s3.png",
+  },
+  lambda: {
+    label: "Lambda",
+    logo: "/assets/icons/lambda.png",
+  },
+  cognito: {
+    label: "Cognito",
+    logo: "/assets/icons/cognito.png",
+  },
+  docker: {
+    label: "Docker",
+    logo: "/assets/icons/docker.png",
+  },
+  cloudfront: {
+    label: "Cloudfront",
+    logo: "/assets/icons/cloudfront.png",
+  },
+  cloudformation: {
+    label: "Cloudformation",
+    logo: "/assets/icons/cloudformation.png",
+  },
+  githubaction: {
+    label: "Github Action",
+    logo: "/assets/icons/githubaction.png",
+  },
 };

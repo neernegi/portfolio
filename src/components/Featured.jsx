@@ -11,10 +11,12 @@ function Featured() {
   const projectsArray = useMemo(
     () =>
       [
-        projects.devgram,
+        projects.mystry,
+        projects.snapgram,
         projects.manlydapper,
         projects.tictactoe,
         projects.fashioncart,
+        projects.devgram,
         projects.todo,
       ].filter(Boolean),
     []

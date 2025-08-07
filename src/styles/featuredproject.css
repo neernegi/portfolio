@@ -80,6 +80,7 @@ section{
 .project-techstack{
   margin-top:5rem;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 2rem;
 }

@@ -1,20 +1,73 @@
 import { logos } from "./logos";
 
 export const projects = {
-  devgram: {
-    title: "Devgram",
+  mystry: {
+    title: "Mystry Thoughts",
     description: [
-      "A social networking twitter like web app. Users can **create** posts, **like** posts and **comment** on posts.",
-      "User can visit any **user profile** by clicking at their name or avatar to view posts by them",
+      "Mystry Thoughts is an **anonymous social platform** where users can share personal thoughts and confessions without revealing their identity. It includes a unique anonymous matching system that connects users for real-time chat only after mutual interest and opposite-gender matching.",
+      "The platform features a **customizable avatar system**, allowing users to edit their digital identity with controls for **hair, skin tone, eyebrow shape, and more**.",
+      "Key features:",
+      "Anonymous thought & confession posting",
+      "**Gender-based match and chat system using Socket.io**",
+      "Custom avatar builder for profile personalization",
+      "Secure authentication with NextAuth",
+      "Mobile-friendly, responsive UI using Tailwind & ShadCN",
     ],
-    images: "/project/Devgram/devgram.png",
 
-    stack: [logos.react, logos.reactquery, logos.typescript, logos.javascript],
+    media: "/project/mystry/mystry.mp4",
+    stack: [
+      logos.nextjs,
+      logos.react,
+      logos.docker,
+      logos.socketio,
+      logos.nextAuth,
+      logos.nodejs,
+      logos.mongodb,
+      // logos.mongoose,
+      logos.typescript,
+      logos.javascript,
+      logos.github,
+    ],
     links: {
-      live: "dev-gram.vercel.app",
-      github: "https://github.com/neernegi/DevGram",
+      live: "mystry-thoughts.onrender.com",
+      github: "https://github.com/neernegi/mystry-thoughts",
     },
   },
+  snapgram: {
+    title: "Snapgram",
+    description: [
+      "Snapgram is a **full-stack serverless social media web app** where users can post, like, comment, save posts, follow/unfollow others, and manage profiles. It offers a smooth and responsive UI with real-time updates and secure authentication",
+      "Built using React.js, TypeScript, React Query, Tailwind CSS, ShadCN UI, Zod for validation, and AWS serverless architecture.",
+      "The backend is fully deployed on AWS with:",
+      "Cognito for user authentication",
+      "**DynamoDB (via Dynamoose) for scalable data storage**",
+      "**S3 for media file handling**",
+      "**Lambda functions for backend logic**",
+      "**CloudFormation for infrastructure as code**",
+      "CloudFront for fast content delivery",
+    ],
+
+    media: "/project/snapgram/snapgram.mp4",
+
+    stack: [
+      logos.react,
+      logos.reactquery,
+      logos.aws,
+      logos.dynamo,
+      logos.s3,
+      logos.lambda,
+      logos.cognito,
+      logos.cloudformation,
+      logos.cloudfront,
+      logos.typescript,
+      logos.javascript,
+    ],
+    links: {
+      live: "snapgram-ussj.onrender.com",
+      github: "https://github.com/neernegi/Snapgram",
+    },
+  },
+
   manlydapper: {
     title: "TheManlyDapper:E-commerce Shoes Platform",
     description: [
@@ -80,6 +133,20 @@ export const projects = {
     ],
     links: {
       github: "https://github.com/neernegi/TheFashionCart",
+    },
+  },
+  devgram: {
+    title: "Devgram",
+    description: [
+      "A social networking twitter like web app. Users can **create** posts, **like** posts and **comment** on posts.",
+      "User can visit any **user profile** by clicking at their name or avatar to view posts by them",
+    ],
+    images: "/project/Devgram/devgram.png",
+
+    stack: [logos.react, logos.reactquery, logos.typescript, logos.javascript],
+    links: {
+      live: "dev-gram.vercel.app",
+      github: "https://github.com/neernegi/DevGram",
     },
   },
   todo: {

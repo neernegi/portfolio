@@ -10,11 +10,14 @@ function Skills() {
   const iconsArray = useMemo(
     () =>
       [
+        logos.aws,
+        logos.docker,
+        logos.nextjs,
+        logos.githubaction,
         logos.typescript,
         logos.nodejs,
         logos.react,
         logos.mongodb,
-
         logos.redux,
         logos.expressjs,
         logos.reactquery,
