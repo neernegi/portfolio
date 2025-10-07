@@ -22,10 +22,9 @@ function Hero() {
           </h1>
           <h2>A fullstack developer</h2>
           <p>
-            I enjoy solving complex problems. Frequently praised as
-            detail-oriented by my peers, I can be relied upon to help your
-            company achieve its goals by providing sustainable and scalable
-            solutions.
+            Full Stack Developer with expertise in front-end and back-end
+            development. Builds scalable and user-centric web applications.
+            Eager to contribute technical skills in a professional environment.
           </p>
           <div className="hero-icons">
             <a
