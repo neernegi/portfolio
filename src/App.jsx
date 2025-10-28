@@ -13,10 +13,7 @@ function App() {
     <div>
       <Header />
       <Hero />
-      {/* <Routes>
-      <Route path="/home" element={<Hero />} />
-        <Route path="/projects" element={<AllProject />} />
-      </Routes> */}
+     
     </div>
   );
 }

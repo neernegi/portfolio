@@ -1,0 +1,460 @@
+.work-experience {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a1f 0%, #16162e 50%, #0a0a1f 100%);
+  color: white;
+  padding: 2rem 0;
+  margin-bottom: 1rem;
+}
+
+.work-experience .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header Styles */
+.work-experience .header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.work-experience .header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work-experience .icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+}
+
+.work-experience .icon {
+  width: 40px;
+  height: 40px;
+  color: white;
+}
+
+.work-experience .title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.work-experience .subtitle {
+  font-size: 1.25rem;
+  color: #cbd5e1;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Primary Project */
+.work-experience .primary-project {
+  margin-bottom: 4rem;
+}
+
+.work-experience .project-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.work-experience .project-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.work-experience .main-project {
+  padding: 2.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.work-experience .main-project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+.work-experience .project-header {
+  margin-bottom: 2rem;
+}
+
+.work-experience .project-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.work-experience .project-subtitle {
+  font-size: 1.25rem;
+  color: #cbd5e1;
+  margin-bottom: 0.5rem;
+}
+
+.work-experience .project-type {
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+}
+
+.work-experience .impact {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #10b981;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.work-experience .impact-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Tech Stack - Fixed Flex Layout */
+.work-experience .tech-stack {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.work-experience .tech-tag {
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-experience .tech-tag.primary {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.work-experience .tech-tag.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.4);
+}
+
+.work-experience .tech-tag.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+}
+
+/* Achievements */
+.work-experience .achievements {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.work-experience .achievement {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.work-experience .achievement:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(5px);
+}
+
+.work-experience .achievement-icon-wrapper {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-experience .achievement-icon {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.work-experience .achievement-text {
+  color: #e2e8f0;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Additional Projects */
+.work-experience .additional-projects {
+  margin-bottom: 4rem;
+}
+
+.work-experience .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.work-experience .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.work-experience .project-card.secondary {
+  padding: 2rem;
+  height: fit-content;
+}
+
+.work-experience .project-card.secondary:hover {
+  transform: translateY(-5px);
+  border-color: rgba(102, 126, 234, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.work-experience .project-header-secondary {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.work-experience .project-emoji {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.work-experience .project-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.work-experience .project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #60a5fa;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.3s ease;
+  padding: 4px;
+}
+
+.work-experience .project-link:hover {
+  color: #93c5fd;
+}
+
+.work-experience .link-icon {
+  width: 16px;
+  height: 16px;
+ 
+}
+
+.work-experience .project-description {
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Features Section */
+.work-experience .features-section {
+  margin: 1.5rem 0;
+}
+
+.work-experience .features-title {
+  color: #c7d2fe;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.work-experience .features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.work-experience .feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: #e2e8f0;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+.work-experience .checkmark {
+  color: #10b981;
+  font-weight: bold;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.work-experience .project-tech {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Tech Summary */
+.work-experience .tech-summary {
+  margin-top: 4rem;
+}
+
+.work-experience .summary-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem;
+  text-align: center;
+}
+
+.work-experience .summary-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.work-experience .tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.work-experience .tech-item {
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  color: white;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.work-experience .tech-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .work-experience .container {
+    padding: 0 1rem;
+  }
+
+  .work-experience .title {
+    font-size: 2.5rem;
+  }
+
+  .work-experience .project-title {
+    font-size: 1.75rem;
+  }
+
+  .work-experience .achievements {
+    grid-template-columns: 1fr;
+  }
+
+  .work-experience .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-experience .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .work-experience .main-project {
+    padding: 1.5rem;
+  }
+
+  .work-experience .project-card.secondary {
+    padding: 1.5rem;
+  }
+
+  .work-experience .tech-stack {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .work-experience .project-tech {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .work-experience .title {
+    font-size: 2rem;
+  }
+
+  .work-experience .section-title {
+    font-size: 2rem;
+  }
+
+  .work-experience .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-experience .tech-stack {
+    justify-content: center;
+  }
+
+  .work-experience .project-tech {
+    justify-content: center;
+  }
+}

@@ -49,3 +49,122 @@ header {
 }
 
 
+/* Mobile Menu Styles */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .header-div {
+    margin: 0 2rem;
+    padding: 1rem;
+  }
+  
+  .navbar {
+    gap: 1.5rem;
+  }
+  
+  .navbar a {
+    font-size: 1rem;
+    padding: 6px 0;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .header-div {
+    margin: 0 2rem;
+  }
+  
+  .navbar {
+    gap: 2rem;
+  }
+  
+  .navbar a {
+    padding: 6px 0;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 767px) {
+  .header-div {
+    margin: 0 0.5rem;
+    padding: 0.75rem;
+  }
+  
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #091c34;
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .navbar.active {
+    display: flex;
+  }
+  
+  .navbar a {
+    padding: 1rem 2rem;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .navbar a::after {
+    display: none;
+  }
+  
+  .navbar a:hover {
+    background-color: rgba(198, 255, 0, 0.1);
+    color: #c6ff00;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1440px) {
+  .header-div {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+}
+
+/* Prevent body scroll when mobile menu is open */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Logo/Brand name styles */
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 1001;
+}
+
+/* Smooth transitions */
+.navbar a {
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Enhanced hover effects for desktop */
+@media (min-width: 768px) {
+  .navbar a:hover {
+    color: #c6ff00;
+  }
+}

@@ -7,6 +7,7 @@ import arrow from "/assets/icons/arrow-circlesvg.svg";
 import Skills from "./Skills";
 import Featured from "./Featured";
 import Contact from "./Contact";
+import WorkExperience from "./WorkExperience";
 // import resumeurl from "/assets/resume.pdf"
 
 function Hero() {
@@ -22,7 +23,7 @@ function Hero() {
           </h1>
           <h2>A fullstack developer</h2>
           <p>
-            Full Stack Developer with expertise in front-end and back-end
+            Full Stack Developer 1.2 year of experience with expertise in front-end and back-end
             development. Builds scalable and user-centric web applications.
             Eager to contribute technical skills in a professional environment.
           </p>
@@ -53,7 +54,7 @@ function Hero() {
               <img className="img-anchor" src={resume} alt="" />
               RESUME
             </a>
-            <a href="#featured" className="btn-anchor work-anchor">
+            <a href="#work" className="btn-anchor work-anchor">
               <img
                 className="img-anchor"
                 src={arrow}
@@ -72,6 +73,9 @@ function Hero() {
         <Skills />
       </div>{" "}
       {/* Skills Section */}
+      <div id="work">
+        <WorkExperience />
+      </div>
       <div id="featured">
         <Featured />
       </div>{" "}

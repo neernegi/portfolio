@@ -128,3 +128,174 @@
   height: auto;
 }
 
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .hero {
+    margin: 5rem 2rem 3rem;
+    gap: 3rem;
+  }
+  
+  .hero-intro h1 {
+    font-size: 3.5rem;
+  }
+  
+  .hero-intro h1 span {
+    margin-left: 0.5rem;
+    display: inline;
+  }
+  
+  .hero-intro h2 {
+    font-size: 2rem;
+    letter-spacing: 0.8px;
+    word-spacing: 1.5px;
+  }
+  
+  .hero-intro p {
+    font-size: 1.1rem;
+    margin: 0 2rem 1rem;
+    text-align: left;
+    padding: 0;
+  }
+  
+  .hero-icons {
+    gap: 0.8rem;
+  }
+  
+  .hero-icons img {
+    width: 2.2rem;
+  }
+  
+  .btn-div {
+    justify-content: flex-start;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .hero {
+    flex-direction: row;
+    margin: 6rem 4rem 4rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+  
+  .hero-intro {
+    margin-top: -5rem;
+    text-align: left;
+    flex: 1;
+  }
+  
+  .hero-intro h1 {
+    font-size: 60px;
+  }
+  
+  .hero-intro h1 span {
+    margin-left: 9px;
+  }
+  
+  .hero-intro h2 {
+    font-size: 34px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+  }
+  
+  .hero-intro p {
+    font-size: 16px;
+    margin: 0 11rem 1rem 0;
+    text-align: left;
+  }
+  
+  .hero-icons {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  
+  .hero-icons img {
+    width: 2.4rem;
+  }
+  
+  .btn-div {
+    justify-content: flex-start;
+  }
+  
+  .programmer-img {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .programmer-img img {
+    width: 36rem;
+  }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1200px) {
+  .hero {
+    margin: 6rem 8rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .hero {
+    margin: 3rem 0.5rem 1rem;
+    gap: 1.5rem;
+  }
+  
+  .hero-intro h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-intro h2 {
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+  }
+  
+  .hero-intro p {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-icons {
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-icons img {
+    width: 1.8rem;
+  }
+  
+  .btn {
+    height: 2.2rem;
+    font-size: 13px;
+  }
+  
+  .btn-anchor {
+    padding: 6px 12px;
+  }
+  
+  .btn-anchor img {
+    width: 1.2rem;
+  }
+  
+  .btn-div {
+    gap: 0.8rem;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 1600px) {
+  .hero {
+    max-width: 1500px;
+  }
+  
+  .programmer-img img {
+    width: 40rem;
+  }
+}
