@@ -292,7 +292,6 @@
 .work-experience .link-icon {
   width: 16px;
   height: 16px;
- 
 }
 
 .work-experience .project-description {
@@ -456,5 +455,107 @@
 
   .work-experience .project-tech {
     justify-content: center;
+  }
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .work-experience .container {
+    padding: 0 2rem;
+  }
+  
+  .work-experience .title {
+    font-size: 3rem;
+  }
+  
+  .work-experience .achievements {
+    grid-template-columns: 1fr;
+  }
+  
+  .work-experience .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .work-experience {
+    padding: 1rem 0;
+  }
+  
+  .work-experience .container {
+    padding: 0 1rem;
+  }
+  
+  .work-experience .title {
+    font-size: 2.5rem;
+  }
+  
+  .work-experience .section-title {
+    font-size: 2rem;
+  }
+  
+  .work-experience .main-project {
+    padding: 1.5rem;
+  }
+  
+  .work-experience .project-card.secondary {
+    padding: 1.5rem;
+  }
+  
+  .work-experience .project-title {
+    font-size: 1.75rem;
+  }
+  
+  .work-experience .achievement {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+  
+  .work-experience .achievement-icon-wrapper {
+    align-self: center;
+  }
+  
+  .work-experience .project-header-secondary {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .work-experience .title {
+    font-size: 2rem;
+  }
+  
+  .work-experience .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .work-experience .main-project {
+    padding: 1rem;
+  }
+  
+  .work-experience .project-card.secondary {
+    padding: 1rem;
+  }
+  
+  .work-experience .project-title {
+    font-size: 1.5rem;
+  }
+  
+  .work-experience .tech-stack {
+    justify-content: center;
+  }
+  
+  .work-experience .project-tech {
+    justify-content: center;
+  }
+  
+  .work-experience .feature-item {
+    font-size: 0.85rem;
   }
 }

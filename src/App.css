@@ -1,7 +1,49 @@
-
-
 body{
   background-color: #161625;
   font-family: 'roboto',Arial, Helvetica, sans-serif;
   display: flex;
+}
+
+/* Ensure proper mobile viewport */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* Smooth scrolling for the whole app */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal overflow */
+* {
+  box-sizing: border-box;
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 768px) {
+  .btn-anchor,
+  .navbar a,
+  .social-links a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Ensure proper section spacing on mobile */
+@media (max-width: 768px) {
+  section {
+    padding: 1rem 0;
+  }
+}
+
+/* Fix for mobile menu scroll prevention */
+body.menu-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
 }

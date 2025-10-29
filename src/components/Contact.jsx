@@ -92,6 +92,18 @@ function Contact() {
     }
   };
 
+  // Common TextField styles without width (controlled by CSS)
+  const textFieldStyles = {
+    "& .MuiInputBase-input": { color: "white" },
+    "& .MuiInputLabel-root": { color: "white" },
+    "& .MuiInputLabel-root.Mui-focused": { color: "#c6ff00" },
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": { borderColor: "white" },
+      "&:hover fieldset": { border: "2px solid white" },
+      "&.Mui-focused fieldset": { borderColor: "#c6ff00" },
+    },
+  };
+
   return (
     <footer>
       <div className="footer">
@@ -140,17 +152,7 @@ function Contact() {
               className="text-input"
               error={!!formErrors.name}
               helperText={formErrors.name}
-              sx={{
-                width: "32rem",
-                "& .MuiInputBase-input": { color: "white" },
-                "& .MuiInputLabel-root": { color: "white" },
-                "& .MuiInputLabel-root.Mui-focused": { color: "#c6ff00" },
-                "& .MuiOutlinedInput-root": {
-                  "& fieldset": { borderColor: "white" },
-                  "&:hover fieldset": { border: "2px solid white" },
-                  "&.Mui-focused fieldset": { borderColor: "#c6ff00" },
-                },
-              }}
+              sx={textFieldStyles}
             />
             <TextField
               id="email"
@@ -162,17 +164,7 @@ function Contact() {
               className="text-input"
               error={!!formErrors.email}
               helperText={formErrors.email}
-              sx={{
-                width: "32rem",
-                "& .MuiInputBase-input": { color: "white" },
-                "& .MuiInputLabel-root": { color: "white" },
-                "& .MuiInputLabel-root.Mui-focused": { color: "#c6ff00" },
-                "& .MuiOutlinedInput-root": {
-                  "& fieldset": { borderColor: "white" },
-                  "&:hover fieldset": { border: "2px solid white" },
-                  "&.Mui-focused fieldset": { borderColor: "#c6ff00" },
-                },
-              }}
+              sx={textFieldStyles}
             />
             <TextField
               id="message"
@@ -186,25 +178,24 @@ function Contact() {
               className="text-input"
               error={!!formErrors.message}
               helperText={formErrors.message}
-              sx={{
-                width: "32rem",
-                "& .MuiInputBase-input": { color: "white" },
-                "& .MuiInputLabel-root": { color: "white" },
-                "& .MuiInputLabel-root.Mui-focused": { color: "#c6ff00" },
-                "& .MuiOutlinedInput-root": {
-                  "& fieldset": { borderColor: "white" },
-                  "&:hover fieldset": { border: "2px solid white" },
-                  "&.Mui-focused fieldset": { borderColor: "#c6ff00" },
-                },
-              }}
+              sx={textFieldStyles}
             />
             <Button
               type="submit"
               variant="outlined"
+              disabled={isSubmitting}
               sx={{
                 width: "8rem",
                 color: "#c6ff00",
                 border: "1px solid #c6ff00",
+                "&:hover": {
+                  border: "1px solid #c6ff00",
+                  backgroundColor: "rgba(198, 255, 0, 0.08)",
+                },
+                "&.Mui-disabled": {
+                  color: "#7a9900",
+                  border: "1px solid #7a9900",
+                },
               }}
               endIcon={<SendIcon sx={{ fill: "#c6ff00" }} />}
             >

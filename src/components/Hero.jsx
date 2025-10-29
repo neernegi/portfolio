@@ -23,9 +23,10 @@ function Hero() {
           </h1>
           <h2>A fullstack developer</h2>
           <p>
-            Full Stack Developer 1.2 year of experience with expertise in front-end and back-end
-            development. Builds scalable and user-centric web applications.
-            Eager to contribute technical skills in a professional environment.
+            Full Stack Developer 1.2 year of experience with expertise in
+            front-end and back-end development. Builds scalable and user-centric
+            web applications. Eager to contribute technical skills in a
+            professional environment.
           </p>
           <div className="hero-icons">
             <a
@@ -72,18 +73,15 @@ function Hero() {
       <div id="skills">
         <Skills />
       </div>{" "}
-      {/* Skills Section */}
       <div id="work">
         <WorkExperience />
       </div>
       <div id="featured">
         <Featured />
       </div>{" "}
-      {/* Featured Projects Section */}
       <div id="contact">
         <Contact />
-      </div>{" "}
-      {/* Contact Section */}
+      </div>
     </section>
   );
 }

@@ -1,5 +1,7 @@
+/* Desktop Styles - Default (1440px and above) */
 footer {
   margin: 4rem 9rem;
+  margin-top: 13rem;
   position: absolute;
 }
 
@@ -37,6 +39,10 @@ footer {
   fill: #c6ff00;
 }
 
+.social-icon {
+  flex-shrink: 0;
+}
+
 .footerbg {
   width: 18rem;
 }
@@ -48,4 +54,440 @@ footer {
   margin-top: 1rem;
 }
 
+.text-input {
+  width: 32rem;
+}
 
+.form-result {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+
+/* Large Laptop (1200px - 1439px) */
+@media (max-width: 1439px) and (min-width: 1200px) {
+  footer {
+    margin: 4rem 6rem;
+    margin-top: 13rem;
+  }
+
+    .text-input{
+    width: 28rem;
+  }
+  
+  .footer {
+    gap: 3rem;
+  }
+}
+
+/* Laptop (1024px - 1199px) */
+@media (max-width: 1199px) and (min-width: 1024px) {
+  footer {
+    margin: 4rem 4rem;
+    margin-top: 12rem;
+  }
+  
+  .footer {
+    gap: 3rem;
+  }
+  
+  .links-footer {
+    gap: 1.5rem;
+  }
+
+  .text-input{
+    width: 28rem;
+  }
+  
+  .footerbg {
+    width: 16rem;
+  }
+}
+
+/* Tablet Landscape (900px - 1023px) */
+@media (max-width: 1023px) and (min-width: 900px) {
+  footer {
+    margin: 3rem 3rem;
+    margin-top: 10rem;
+    position: relative;
+  }
+  
+  .footer {
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .links-footer {
+    gap: 1.5rem;
+  }
+
+    .text-input{
+    width: 24rem;
+  }
+  
+  .footerbg {
+    width: 15rem;
+  }
+}
+
+/* Tablet Portrait (768px - 899px) */
+@media (max-width: 899px) and (min-width: 768px) {
+  footer {
+    margin: 3rem 2rem;
+    margin-top: 8rem;
+    position: relative;
+  }
+  
+  .footer {
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  .links-footer {
+    flex-direction: column-reverse;
+    text-align: left;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  
+  .social-links {
+    align-items: flex-start;
+  }
+  
+  .social-links a {
+    justify-content: flex-start;
+    min-width: auto;
+  }
+  
+  .footerbg {
+    width: 14rem;
+    align-self: flex-start;
+  }
+  
+  .contact {
+    text-align: left;
+  }
+  
+  .contact-input {
+    align-items: stretch;
+    width: 100%;
+  }
+
+  
+  /* Force TextField to be 100% width */
+  .text-input{
+    width: 18rem;
+  }
+  
+  .text-input .MuiTextField-root,
+  .text-input.MuiTextField-root {
+    width: 100% !important;
+  }
+  
+  .contact-input button {
+    align-self: flex-start;
+  }
+}
+
+/* Mobile Landscape (600px - 767px) */
+@media (max-width: 767px) and (min-width: 600px) {
+  footer {
+    margin: 2rem 1.5rem;
+    margin-top: 6rem;
+    position: relative;
+  }
+  
+  .footer {
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .links-footer {
+    flex-direction: column-reverse;
+    text-align: left;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  
+  .social-links {
+    align-items: flex-start;
+  }
+  
+  .social-links a {
+    justify-content: flex-start;
+    min-width: auto;
+  }
+  
+  .footerbg {
+    width: 13rem;
+    align-self: flex-start;
+  }
+  
+  .contact {
+    display: none;
+  }
+  
+  .contact-input {
+    align-items: stretch;
+    width: 100%;
+  }
+  
+  /* Force TextField to be 100% width */
+  .text-input {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .contact-input button {
+    align-self: flex-start;
+  }
+}
+
+/* Mobile Portrait (480px - 599px) */
+@media (max-width: 599px) and (min-width: 480px) {
+  footer {
+    margin: 2rem 1rem;
+    margin-top: 5rem;
+    position: relative;
+  }
+  
+  .footer {
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .links-footer {
+    flex-direction: column-reverse;
+    text-align: left;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  
+  .social-links {
+    align-items: flex-start;
+  }
+  
+  .social-links a {
+    justify-content: flex-start;
+    min-width: auto;
+    font-size: 0.95rem;
+  }
+  
+  .footerbg {
+    width: 12rem;
+    align-self: flex-start;
+  }
+  
+  .contact {
+    display: none;
+    text-align: left;
+  }
+  
+  .contact h1,
+  .links-footer h1 {
+    font-size: 1.8rem;
+  }
+  
+  .contact-input {
+    gap: 18px;
+    align-items: stretch;
+    width: 100%;
+  }
+  
+  /* Force TextField to be 100% width */
+  .text-input {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .contact-input button {
+    align-self: flex-start;
+  }
+}
+
+/* Small Mobile (375px - 479px) */
+@media (max-width: 479px) and (min-width: 375px) {
+  footer {
+    margin: 1.5rem 1rem;
+    margin-top: 4rem;
+    position: relative;
+  }
+  
+  .footer {
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 1.8rem;
+  }
+  
+  .links-footer {
+    flex-direction: column-reverse;
+    text-align: left;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  
+  .social-links {
+    align-items: flex-start;
+    gap: 0.9rem;
+  }
+  
+  .social-links a {
+    justify-content: flex-start;
+    min-width: auto;
+    font-size: 0.95rem;
+    gap: 1rem;
+  }
+  
+  .social-icon {
+    font-size: 34px !important;
+  }
+  
+  .footerbg {
+    width: 11rem;
+    align-self: flex-start;
+  }
+  
+  .contact {
+    text-align: left;
+    display: none;
+  }
+  
+  .contact h1,
+  .links-footer h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-input {
+    gap: 16px;
+    align-items: stretch;
+    width: 100%;
+  }
+  
+  /* Force TextField to be 100% width */
+  .contact-input .text-input {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .contact-input button {
+    align-self: flex-start;
+    width: auto;
+    min-width: 8rem;
+  }
+}
+
+/* Extra Small Mobile (320px - 374px) */
+@media (max-width: 374px) {
+  footer {
+    margin: 1rem 0.8rem;
+    margin-top: 3rem;
+    position: relative;
+  }
+  
+  .footer {
+    flex-direction: column;
+    gap: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .links-footer {
+    flex-direction: column-reverse;
+    text-align: left;
+    gap: 1.2rem;
+    align-items: flex-start;
+  }
+  
+  .social-links {
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  
+  .social-links a {
+    justify-content: flex-start;
+    min-width: auto;
+    font-size: 0.9rem;
+    padding: 6px 0;
+    gap: 0.9rem;
+  }
+  
+  .social-icon {
+    font-size: 32px !important;
+  }
+  
+  .footerbg {
+    width: 10rem;
+    align-self: flex-start;
+  }
+  
+  .contact {
+    text-align: left;
+    display: none;
+  }
+  
+  .contact h1,
+  .links-footer h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-input {
+    gap: 14px;
+    align-items: stretch;
+    width: 100%;
+  }
+  
+  /* Force TextField to be 100% width */
+  .contact-input .text-input {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .contact-input button {
+    align-self: flex-start;
+    width: auto;
+    min-width: 7rem;
+  }
+}
+
+/* Prevent horizontal overflow and force full width on mobile */
+@media (max-width: 768px) {
+  footer {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  .footer {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .contact-input {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  /* Important: Override Material-UI inline styles for TextField */
+  .text-input {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .MuiTextField-root,
+  .MuiFormControl-root {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+}

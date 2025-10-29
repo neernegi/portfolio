@@ -1,4 +1,7 @@
 import React from "react";
+import "../styles/wave.css";
+
+
 
 function Wave({ children, color }) {
   // Check if color is a gradient or solid color
@@ -23,7 +26,8 @@ function Wave({ children, color }) {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
-        style={{ marginTop: "-9rem" }}
+        className="svg-first"
+    
       >
         {isGradient && (
           <defs>
@@ -44,7 +48,8 @@ function Wave({ children, color }) {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
-        style={{ transform: "rotate(0.5turn)", marginBottom: "-10rem" }}
+        className="svg-second"
+      
       >
         {isGradient && (
           <defs>

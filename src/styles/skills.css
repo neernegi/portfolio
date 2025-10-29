@@ -39,3 +39,91 @@
   width: 5rem;
 }
 
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .feature-div {
+    margin: 7rem 1rem;
+    gap: 3rem;
+  }
+  
+  .coder img {
+    width: 26rem;
+    margin-top: 2rem;
+  }
+  
+  .techstack-div h1 {
+    font-size: 2.5rem;
+  }
+  
+  .tech-box {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .tech-stack img {
+    width: 4rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .feature-div {
+    flex-direction: column;
+    margin: 5rem 1rem;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .coder img {
+    width: 20rem;
+    margin-top: 0;
+  }
+  
+  .techstack-div h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tech-box {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .tech-stack img {
+    width: 3.5rem;
+  }
+  
+  .tech-stack h4 {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .feature-div {
+    margin: 4rem 0.5rem;
+    gap: 1.5rem;
+  }
+  
+  .coder img {
+    width: 16rem;
+  }
+  
+  .techstack-div h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tech-box {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .tech-stack img {
+    width: 3rem;
+  }
+  
+  .tech-stack h4 {
+    font-size: 0.8rem;
+  }
+}
