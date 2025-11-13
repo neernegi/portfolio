@@ -181,7 +181,7 @@ function WorkExperience() {
 
         {/* Additional Projects */}
         <div className="additional-projects">
-          <h2 className="section-title">Additional Backend Projects</h2>
+          {/* <h2 className="section-title">Additional Backend Projects</h2> */}
           <div className="projects-grid">
             {additionalProjects.map((project, index) => (
               <div key={index} className="project-card secondary">

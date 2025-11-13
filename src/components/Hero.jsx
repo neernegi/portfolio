@@ -21,7 +21,7 @@ function Hero() {
           <h1>
             Hi,<span>I'm Neeraj</span>
           </h1>
-          <h2>A fullstack developer</h2>
+          <h2>A Full-Stack MERN Developer</h2>
           <p>
             Full Stack Developer 1.2 year of experience with expertise in
             front-end and back-end development. Builds scalable and user-centric

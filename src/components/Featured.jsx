@@ -124,24 +124,7 @@ function Featured() {
           </div>
         </Wave>
       ))}
-      {/* <div
-        style={{ display: "flex", justifyContent: "center", marginTop: "20px" }}
-      >
-        <Link to="/projects">
-          <Button
-            variant="outlined"
-            sx={{
-              color: "#c6ff00",
-              border: "1px solid #c6ff00",
-              textTransform: "none",
-
-              padding: "8px 16px",
-            }}
-          >
-            VIEW ALL PROJECTS
-          </Button>
-        </Link>
-      </div> */}
+     
     </section>
   );
 }

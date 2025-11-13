@@ -44,10 +44,7 @@ function Skills() {
         </div>
         <div
           className="techstack-div"
-          data-aos="fade-up" // Changed from fade-left to fade-up for better visibility
-          data-aos-duration="600"
-          // data-aos-delay={index * 80} // Reduced delay for faster sequential animation
-          data-aos-once="true" // Ensure animation happens only once
+          
         >
           <h1>My Tech Stack</h1>
           <div className="tech-box">
